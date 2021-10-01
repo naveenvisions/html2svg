@@ -23,14 +23,17 @@ Go with the following examples.
     });
 
 
+
 All the top level functions accept DOM node and rendering options, and return a promise fulfilled with corresponding dataURL:
     • toPng 
-    • toSvg 
+    • toSvg
     • toJpeg 
     • toBlob 
     • toCanvas 
     • toPixelData 
+
 Go with the following examples.
+
 toPng
 Get a PNG image base64-encoded data URL and display it right away:
 var node = document.getElementById('my-node');
@@ -49,6 +52,7 @@ htmlToImage.toPng(document.getElementById('my-node'))
   .then(function (dataUrl) {
     download(dataUrl, 'my-node.png');
   });
+  
 toSvg
 Get an SVG data URL, but filter out all the <i> elements:
 function filter (node) {
@@ -59,8 +63,10 @@ htmlToImage.toSvg(document.getElementById('my-node'), { filter: filter })
   .then(function (dataUrl) {
     /* do something */
   });
+    
 toJpeg
 Save and download a compressed JPEG image:
+    
 htmlToImage.toJpeg(document.getElementById('my-node'), { quality: 0.95 })
   .then(function (dataUrl) {
     var link = document.createElement('a');
@@ -68,18 +74,23 @@ htmlToImage.toJpeg(document.getElementById('my-node'), { quality: 0.95 })
     link.href = dataUrl;
     link.click();
   });
+    
 toBlob
 Get a PNG image blob and download it (using FileSaver):
+    
 htmlToImage.toBlob(document.getElementById('my-node'))
   .then(function (blob) {
     window.saveAs(blob, 'my-node.png');
   });
+    
 toCanvas
 Get a HTMLCanvasElement, and display it right away:
+    
 htmlToImage.toCanvas(document.getElementById('my-node'))
   .then(function (canvas) {
     document.body.appendChild(canvas);
   });
+    
 toPixelData
 Get the raw pixel data as a Uint8Array with every 4 array elements representing the RGBA data of a pixel:
 var node = document.getElementById('my-node');
