@@ -22,11 +22,10 @@ Go with the following examples.
         downloadLink.href = dataUrl;
     });
 
-
-
+[toPng](https://github.com/naveenvisions/html2svg#toPixelData)
 All the top level functions accept DOM node and rendering options, and return a promise fulfilled with corresponding dataURL:
 
-    • toPng 
+    •   [toPng](https://github.com/naveenvisions/html-to-image#toPng)
     • toSvg
     • toJpeg 
     • toBlob 
@@ -35,7 +34,7 @@ All the top level functions accept DOM node and rendering options, and return a 
 
 Go with the following examples.
 
-toPng
+# toPng
 Get a PNG image base64-encoded data URL and display it right away:
 
     var node = document.getElementById('my-node');
@@ -56,7 +55,7 @@ Get a PNG image base64-encoded data URL and download it (using download):
         download(dataUrl, 'my-node.png');
       });
   
-toSvg
+# toSvg
 Get an SVG data URL, but filter out all the <i> elements:
     
     function filter (node) {
@@ -67,7 +66,7 @@ Get an SVG data URL, but filter out all the <i> elements:
         /* do something */
       });
     
-toJpeg
+# toJpeg
 Save and download a compressed JPEG image:
     
     htmlToImage.toJpeg(document.getElementById('my-node'), { quality: 0.95 })
@@ -78,7 +77,7 @@ Save and download a compressed JPEG image:
         link.click();
       });
     
-toBlob
+# toBlob
 Get a PNG image blob and download it (using FileSaver):
     
     htmlToImage.toBlob(document.getElementById('my-node'))
@@ -86,7 +85,7 @@ Get a PNG image blob and download it (using FileSaver):
         window.saveAs(blob, 'my-node.png');
       });
     
-toCanvas
+# toCanvas
 Get a HTMLCanvasElement, and display it right away:
 
     htmlToImage.toCanvas(document.getElementById('my-node'))
@@ -94,7 +93,7 @@ Get a HTMLCanvasElement, and display it right away:
         document.body.appendChild(canvas);
       });
     
-toPixelData
+# toPixelData
 Get the raw pixel data as a Uint8Array with every 4 array elements representing the RGBA data of a pixel:
     
     var node = document.getElementById('my-node');
