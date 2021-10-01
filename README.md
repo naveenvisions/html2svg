@@ -2,9 +2,10 @@
 This is the code that how to convert html to svg using dom-to-image.js library. The function toSvg is return the svg in charset=utf-8 instead of base64.
 Go with the following examples.
 
-domtoimage.toSvg(document.getElementById('my-node'), {filter: filter})
-    .then(function (dataUrl) {
     
+    domtoimage.toSvg(document.getElementById('my-node'), {filter: filter})
+    .then(function (dataUrl) 
+    {
         // remove the data:image/svg+xml;charset=utf-8, from the SVG image object
         let s = dataUrl.split("data:image/svg+xml;charset=utf-8,");
         var dataUrl = btoa(unescape(a[1]));
