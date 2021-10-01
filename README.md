@@ -22,15 +22,17 @@ Go with the following examples.
         downloadLink.href = dataUrl;
     });
 
-[toPng](https://github.com/naveenvisions/html2svg#toPixelData)
+
 All the top level functions accept DOM node and rendering options, and return a promise fulfilled with corresponding dataURL:
 
-    •   [toPng](https://github.com/naveenvisions/html-to-image#toPng)
-    • toSvg
-    • toJpeg 
-    • toBlob 
-    • toCanvas 
-    • toPixelData 
+* [toPng](https://github.com/naveenvisions/html-to-image#toPng)
+* [toSvg](https://github.com/naveenvisions/html-to-image#toSvg)
+* [toJpeg](https://github.com/naveenvisions/html-to-image#toJpeg)
+* [toBlob](https://github.com/naveenvisions/html-to-image#toBlob)
+* [toCanvas](https://github.com/naveenvisions/html-to-image#toCanvas)
+* [toPixelData](https://github.com/naveenvisions/html-to-image#toPixelData)
+    
+    
 
 Go with the following examples.
 
