@@ -25,12 +25,12 @@ Go with the following examples.
 
 All the top level functions accept DOM node and rendering options, and return a promise fulfilled with corresponding dataURL:
 
-* [toPng](https://github.com/naveenvisions/html-to-image#toPng)
-* [toSvg](https://github.com/naveenvisions/html-to-image#toSvg)
-* [toJpeg](https://github.com/naveenvisions/html-to-image#toJpeg)
-* [toBlob](https://github.com/naveenvisions/html-to-image#toBlob)
-* [toCanvas](https://github.com/naveenvisions/html-to-image#toCanvas)
-* [toPixelData](https://github.com/naveenvisions/html-to-image#toPixelData)
+* [toPng](https://github.com/naveenvisions/html2svg#toPng)
+* [toSvg](https://github.com/naveenvisions/html2svg#toSvg)
+* [toJpeg](https://github.com/naveenvisions/html2svg#toJpeg)
+* [toBlob](https://github.com/naveenvisions/html2svg#toBlob)
+* [toCanvas](https://github.com/naveenvisions/html2svg#toCanvas)
+* [toPixelData](https://github.com/naveenvisions/html2svg#toPixelData)
     
     
 
