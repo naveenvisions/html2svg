@@ -1,0 +1,49 @@
+<script src="js/dom-to-image.js"></script>
+<input type="button" id="btn" value="Create" />
+<br>
+<br>
+<div id="my-node">
+    <div class="vertial_align_3 horiz_align_3 label-preview-field-content" style="border: solid;background: #fff;height:287px; width:287px ">
+        <p data-position="0" style="font-size:14px" class="h_0"> may also need to add a title in the field (e.g. </p>
+        <p data-position="1" style="font-size:14px" class="h_1">You may need to create more than one label file. For example, one for the packaging, and one for the product.</p>
+    </div>
+</div>
+<div id="here-appear-theimages">
+    <p>
+        Here the images will be appended when you click the button
+    </p>
+    <a download="FILENAME.svg" id='test' href="">Download</a>
+</div>
+<script>
+document.getElementById('btn').addEventListener('click', function() 
+{
+    const node = document.getElementById('my-node');  
+    const scale = 5; 
+    this.shot_loading = true;
+
+    function filter (node) {
+        return (node.tagName !== 'i');
+    }
+
+    domtoimage.toSvg(document.getElementById('my-node'), {filter: filter})
+    .then(function (dataUrl) {
+        // remove the data:image/svg+xml;charset=utf-8, from the SVG image object
+        let a = dataUrl.split("data:image/svg+xml;charset=utf-8,");
+        var dataUrl = btoa(unescape(a[1]));
+        console.log(dataUrl); // Outputs: "SGVsbG8gV29ybGQh"
+        
+        // Convert the svg image into base64
+        dataUrl = "data:image/svg+xml;base64,"+dataUrl
+        console.log(dataUrl); // Outputs: "SGVsbG8gV29ybGQh"
+        //Image object
+        var img = new Image();
+        img.src = dataUrl;
+        //append the image in here-appear-theimages div
+        document.getElementById("here-appear-theimages").appendChild(img);
+        // download the image    
+        var downloadLink = document.getElementById('test');
+        downloadLink.href = dataUrl;
+    });
+});
+
+</script>
