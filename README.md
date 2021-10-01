@@ -8,10 +8,10 @@ Go with the following examples.
         // remove the data:image/svg+xml;charset=utf-8, from the SVG image object
         let s = dataUrl.split("data:image/svg+xml;charset=utf-8,");
         var dataUrl = btoa(unescape(a[1]));
-        console.log(dataUrl); // Outputs: "SGVsbG8gV29ybGQh"
+        console.log(dataUrl); // Outputs: "PHN2ZyB4bWxucz0iaHR0"
         // Convert the svg image into base64
         dataUrl = "data:image/svg+xml;base64,"+dataUrl
-        console.log(dataUrl); // Outputs: "SGVsbG8gV29ybGQh"
+        console.log(dataUrl); // Outputs: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0"
         //Image object
         var img = new Image();
         img.src = dataUrl;
