@@ -8,7 +8,6 @@ domtoimage.toSvg(document.getElementById('my-node'), {filter: filter})
         let s = dataUrl.split("data:image/svg+xml;charset=utf-8,");
         var dataUrl = btoa(unescape(a[1]));
         console.log(dataUrl); // Outputs: "SGVsbG8gV29ybGQh"
-        
         // Convert the svg image into base64
         dataUrl = "data:image/svg+xml;base64,"+dataUrl
         console.log(dataUrl); // Outputs: "SGVsbG8gV29ybGQh"
