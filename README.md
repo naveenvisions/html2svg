@@ -54,7 +54,9 @@ Get a PNG image base64-encoded data URL and download it (using download):
 
     htmlToImage.toPng(document.getElementById('my-node'))
       .then(function (dataUrl) {
-        download(dataUrl, 'my-node.png');
+        // download the image    
+        var downloadLink = document.getElementById('test');
+        downloadLink.href = dataUrl;
       });
   
 # toSvg
@@ -80,7 +82,7 @@ Save and download a compressed JPEG image:
       });
     
 # toBlob
-Get a PNG image blob and download it (using FileSaver):
+Get a PNG image blob and download it (using [FileSaver](https://github.com/eligrey/FileSaver.js)):
     
     htmlToImage.toBlob(document.getElementById('my-node'))
       .then(function (blob) {
